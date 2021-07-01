@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cemast</title>
+
+    <!-- Links-->
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Styles-->
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/navigation.css">
+
+        <!-- icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+  <header id="header">
+      <nav id="nav" class="container">
+        <div class="logo">
+            <a href="#">CE<span>MAST</span></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#Home">Inicio</a></li>
+                <li><a href="#About">Sobre</a></li>
+                <li><a href="#Services">Serviços</a></li>
+                <li><a href="Contact">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="toggle" >
+            <i id="menu" class="fas fa-bars"></i>
+        </div>
+      </nav>
+    
+  </header>
+
+  <main>
+      <section id="Home" class="section">
+          <div class="container grid">
+              <div class="image">
+                  <img src="/assets/books.jpg" alt="Livros na mesa">
+              </div>
+              <div class="text">
+                <h2 class="title">A melhor educação para seu filho</h2>
+                <p>Centro Educacional MAST, um lugar de aprendizado.</p>
+                
+                <div class="content-button">
+                    <a href="#" class="button">Saiba mais</a>
+                </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="About" class="section">
+          <div class="container grid">
+                <div class="image">
+                    <img src="/assets/bg-pecils.jpg" alt="lapis de cor">
+                </div>
+
+                <div class="text grid">
+                    
+                        <h2 class="title">Sobre nós</h2>
+                    
+                    
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                            itaque soluta tempore deleniti nesciunt, autem neque fugit est 
+                            quam architecto aspernatur praesentium incidunt voluptatibus 
+                            eveniet temporibus ad, minima adipisci mollitia.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                            itaque soluta tempore deleniti nesciunt, autem neque fugit est 
+                            quam architecto aspernatur praesentium incidunt voluptatibus 
+                            eveniet temporibus ad, minima adipisci mollitia.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                            itaque soluta tempore deleniti nesciunt, autem neque fugit est 
+                            quam architecto aspernatur praesentium incidunt voluptatibus 
+                            eveniet temporibus ad, minima adipisci mollitia.
+                        </p>
+
+                    
+                </div>
+          </div>
+      </section>
+
+      <section id="Services" class="section">
+          <div class="container grid">
+            <header>
+                <h2 class="title">Serviços</h2>
+            </header>
+  
+            <div class="cards">
+  
+                <div class="card">
+                    
+                        <img src="/assets/toys.jpg" alt="">
+                        
+                    <div class="overlay"></div>
+                    <div class="text">
+                        <h3>Creche</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+  
+                <div class="card">
+                    
+                        <img src="/assets/books kid.jpg" alt="">
+                        
+                    <div class="overlay"></div>
+                    <div class="text">
+                        <h3>Escola</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+  
+                
+                </div>
+            </div>
+          </div>
+      </section>
+  </main>
+
+
+  <script>
+
+    const nav = document.querySelector('#header nav')
+    const toggle = document.getElementById('toggle')
+    const i = document.getElementById('menu');
+
+    console.log(toggle)
+
+    
+    toggle.addEventListener('click', function () {
+        nav.classList.toggle('show')
+        toggle.classList.toggle('menu-active')
+
+        if(toggle.classList == "menu-active"){
+            i.classList.remove('fa-bars')
+            i.classList.add('fa-times')
+        }else {
+            i.classList.remove('fa-times')
+            i.classList.add('fa-bars')
+        }
+    })
+    
+      
+
+      
+  </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Variables*/
+
+:root {
+    
+     /* colors */
+  --hue: 36;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 100% 57%);
+  --base-color-second: hsl(var(--hue) 94% 79%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: "DM Sans", sans-serif;
+}
+
+/* Base*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 400 var(--subtitle-font-size) var(--body-font);
+    color: var(--text-color);
+    background: var(--body-color);
+}
+
+.title{
+    font: 700 var(--title-font-size) var(--title-font);
+    color: var(--title-color);
+}
+
+.container {
+    
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.section{
+    padding: 5rem 0;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.button {
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    font: 500 1rem var(--body-font);
+    transition: background 0.3s;
+  }
+
+  .button:hover {
+    background: var(--base-color-alt);
+  }
+
+/* logo */
+.logo a{
+    font: 700 var(--title-font-size) 'Poppins',sans-serif;
+    color: var(--base-color);
+}
+
+
+
+/*layot*/
+
+#header{
+    width: 100%;
+    height: auto;
+    
+
+    border-bottom: 0.5px solid #e4e4e4;
+}
+
+#header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* home */
+#Home {
+    overflow: hidden;
+}
+
+#Home .container {
+    margin: 0;
+}
+
+#Home .image {
+    position: relative;
+}
+
+#Home .image::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.7%;
+    z-index: 0;
+}
+
+#Home .image img{
+    position: relative;
+    right: 2.93rem;
+}
+
+#Home .image img,
+#Home .image::before {
+    border-radius: 0.25rem;
+}
+
+#Home .text{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    text-align: center;
+    
+}
+
+/* About */
+#About {
+    background: white;
+}
+
+#About .container {
+    margin: 0;
+}
+
+#About .image{
+    position: relative;
+}
+
+#About .image::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -8.3%;
+    left: -33%;
+    z-index: 0;
+}
+
+#About .image img{
+    position: relative;
+    
+}
+
+#About .image img,
+#About .image::before {
+    border-radius: 0.25rem;
+}
+
+#About .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* Services */
+
+
+#Services .cards {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: grid;
+    gap: 1rem;
+
+}
+
+#Services .cards .card {
+    width: 100%;
+    height: 500px;
+
+    position: relative;
+}
+
+
+
+#Services .cards .card:hover .overlay, 
+#Services .cards .card:hover .text {
+    opacity: 1;
+    display: flex;
+    transform: translateY(0);
+}
+
+
+
+#Services .card img{
+    border-radius: 8px;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+#Services .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0,0.2), var(--base-color-alt));
+    border-radius:8px;
+    opacity: 0;
+    
+    
+    
+    transition: 1s;
+}
+
+#Services .text{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    text-align: center;
+
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 1.5s;
+}
+
+#Services .text h3 {
+    font: 600 1.3rem var(--title-font);
+    text-shadow: 0 1px 2px black;
+}
+
+#Services .text hr {
+    width: 50%;
+    height: 2px;
+    border-radius: 50%;
+}
+
+/*Contact*/
