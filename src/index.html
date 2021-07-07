@@ -15,6 +15,8 @@
         <!-- Styles-->
         <link rel="stylesheet" href="styles/global.css">
         <link rel="stylesheet" href="styles/navigation.css">
+        <link rel="stylesheet" href="styles/sections.css">
+        <link rel="stylesheet" href="styles/media.css">
 
         <!-- icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,19 +26,19 @@
   <header id="header">
       <nav id="nav" class="container">
         <div class="logo">
-            <a href="#">CE<span>MAST</span></a>
+            <a href="#Home">CE<span>MAST</span></a>
         </div>
 
         <div class="menu">
             <ul>
-                <li><a href="#Home">Inicio</a></li>
-                <li><a href="#About">Sobre</a></li>
-                <li><a href="#Services">Serviços</a></li>
-                <li><a href="Contact">Contato</a></li>
+                <li><a href="#Home" >Inicio</a></li>
+                <li><a href="#About"  >Sobre</a></li>
+                <li><a href="#Services"  >Serviços</a></li>
+                <li><a href="#Contact"  >Contato</a></li>
             </ul>
         </div>
 
-        <div id="toggle" >
+        <div id="toggle" onclick="handleMenu()" >
             <i id="menu" class="fas fa-bars"></i>
         </div>
       </nav>
@@ -54,7 +56,7 @@
                 <p>Centro Educacional MAST, um lugar de aprendizado.</p>
                 
                 <div class="content-button">
-                    <a href="#" class="button">Saiba mais</a>
+                    <a href="#Services" class="button">Saiba mais</a>
                 </div>
               </div>
           </div>
@@ -102,25 +104,27 @@
             <div class="cards">
   
                 <div class="card">
-                    
+                    <div class="image">
                         <img src="/assets/toys.jpg" alt="">
+                    </div>
                         
-                    <div class="overlay"></div>
+                    
                     <div class="text">
-                        <h3>Creche</h3>
-                        <hr>
+                        <h3 class="subtitle">Creche</h3>
+                        
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
   
                 <div class="card">
-                    
+                    <div class="image">
                         <img src="/assets/books kid.jpg" alt="">
+                    </div>
                         
-                    <div class="overlay"></div>
+                    
                     <div class="text">
-                        <h3>Escola</h3>
-                        <hr>
+                        <h3 class="subtitle">Escola</h3>
+                        
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
@@ -130,34 +134,70 @@
             </div>
           </div>
       </section>
+
+      <section id="Contact" class="section">
+          <div class="container grid">
+              <div class="text">
+                <h2 class="title">Entre em contato com a gente!</h2>
+                <p>Entre em contato conosco, queremostirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=5512999999999&text=Olá%20gostaria%20de%20agendar%20um%20hórario" class="button">
+                        <i class="fab fa-whatsapp"></i>
+                        Ente em contato
+                    </a>
+                </div>
+              </div>
+              
+              <div class="content-info">
+                <ul class="grid">
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        (21)99999-9999
+                    </li>
+
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Estr. Rio São Paulo Variante - Jardim Guandu, Nova Iguaçu - RJ, 26297-459
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        email@contato.com
+                    </li>
+
+                </ul>
+              </div>
+          </div>
+      </section>
+
+
   </main>
 
+  <footer class="section">
+      <div class="container grid">
+          <div class="brand">
+            <a href="" class="title">Cemast</a>
 
-  <script>
+            <p>©2021 Beautysalon.</p>
+            <p>Todos os direitos resevardos.</p>
+          </div>
 
-    const nav = document.querySelector('#header nav')
-    const toggle = document.getElementById('toggle')
-    const i = document.getElementById('menu');
+          <div class="social-links ">
+            <a href="https://www.instagram.com/centroeducacionalmast/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
 
-    console.log(toggle)
+            <a href="https://www.instagram.com/centroeducacionalmast/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            
+          </div>
+          
+      </div>
+  </footer>
 
-    
-    toggle.addEventListener('click', function () {
-        nav.classList.toggle('show')
-        toggle.classList.toggle('menu-active')
-
-        if(toggle.classList == "menu-active"){
-            i.classList.remove('fa-bars')
-            i.classList.add('fa-times')
-        }else {
-            i.classList.remove('fa-times')
-            i.classList.add('fa-bars')
-        }
-    })
-    
-      
-
-      
-  </script>
+    <!-- scrollreveal -->
+   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="/main.js"></script>
 </body>
 </html>

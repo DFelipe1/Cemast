@@ -1,0 +1,255 @@
+.section header{
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* home */
+#Home {
+    margin-top: 6rem;
+    overflow: hidden;
+}
+
+#Home .container {
+    margin: 0;
+}
+
+#Home .image {
+    position: relative;
+    
+}
+
+#Home .image::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.7%;
+    z-index: 0;
+}
+
+#Home .image img{
+    position: relative;
+    right: 2.93rem;
+    
+}
+
+#Home .image img,
+#Home .image::before {
+    border-radius: 0.25rem;
+}
+
+#Home .text{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    text-align: center;
+    
+}
+
+/* About */
+#About {
+    background: white;
+}
+
+#About .container {
+    margin: 0;
+}
+
+#About .image{
+    position: relative;
+    
+}
+
+#About .image::before{
+    content: '';
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -8.3%;
+    left: -33%;
+    z-index: 0;
+    
+}
+
+#About .image img{
+    position: relative;
+    
+}
+
+#About .image img,
+#About .image::before {
+    border-radius: 0.25rem;
+}
+
+#About .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* Services */
+
+
+#Services .cards {
+    max-width: 430px;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#Services .cards .card {
+    width:fit-content;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    transition: 0.5s;
+
+    border: 1px solid transparent
+
+}
+
+
+
+
+#Services .card .image{
+    
+    clip-path: circle();
+
+    width: 9rem;
+    height: 9rem;
+    
+}
+
+#Services .card .image img{
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+
+
+/*#Services .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0,0.2), var(--base-color-alt));
+    border-radius:8px;
+    opacity: 0;
+    
+    
+    
+    transition: 1s;
+}*/
+
+#Services .text{
+  width: 300px;
+
+  margin-top: 1.5rem;
+}
+
+#Services .text .subtitle {
+    margin-bottom: 1rem;
+}
+
+#Services .text p {
+    font: normal 1rem var(--body-font);
+    color: var(--color-text);
+}
+
+#Services .cards .card:hover {
+    border: 1px solid var(--base-color);
+    transform: translateY(-2%) !important; 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*Contact*/
+#Contact {
+    background: #fff;
+}
+
+#Contact .container .text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#Contact  .content-info {
+    max-width: 500px;
+}
+
+#Contact  .content-info .grid{
+    
+    gap: 2rem;
+}
+
+#Contact .container i{
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+#Contact  .content-info .grid i{
+    color: var(--base-color);
+    min-width: 24px;
+}
+
+#Contact  .content-info .grid li {
+    display: flex;
+    align-items: center;
+    
+}
+
+/* footer */
+footer {
+    background: var(--base-color);
+}
+
+footer .brand {
+    color: var(--text-color-light);
+    display: grid;
+    gap: 1rem;
+    width: fit-content;
+}
+
+footer .social-links {
+    
+    display: flex;
+    gap: 2rem;
+    
+}
+
+footer .social-links i {
+    font-size: 1.3rem;
+    min-width: 24px;
+    transition: 0.5s;
+    color: var(--text-color-light);
+}
+
+footer .social-links i:hover {
+    transform: translateY(-10px)
+}
+ 
+

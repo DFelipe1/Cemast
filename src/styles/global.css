@@ -58,8 +58,13 @@ body {
     color: var(--title-color);
 }
 
+.subtitle{
+    font: 600 1.5rem var(--title-font);
+    color: var(--title-color);
+}
+
+
 .container {
-    
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 }
@@ -99,11 +104,16 @@ body {
 /*layot*/
 
 #header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     width: 100%;
-    height: auto;
-    
-
+    background: #fff;
     border-bottom: 0.5px solid #e4e4e4;
+    transition: 0.5s;
+
+    padding: 1rem 0; 
 }
 
 #header .container{
@@ -112,169 +122,7 @@ body {
     justify-content: space-between;
 }
 
-/* home */
-#Home {
-    overflow: hidden;
-}
-
-#Home .container {
-    margin: 0;
-}
-
-#Home .image {
-    position: relative;
-}
-
-#Home .image::before{
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: var(--base-color-second);
-    position: absolute;
-    top: -16.8%;
-    left: 16.7%;
-    z-index: 0;
-}
-
-#Home .image img{
-    position: relative;
-    right: 2.93rem;
-}
-
-#Home .image img,
-#Home .image::before {
-    border-radius: 0.25rem;
-}
-
-#Home .text{
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+#header.sticky {
     
-    
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    text-align: center;
-    
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
-
-/* About */
-#About {
-    background: white;
-}
-
-#About .container {
-    margin: 0;
-}
-
-#About .image{
-    position: relative;
-}
-
-#About .image::before{
-    content: '';
-    height: 100%;
-    width: 100%;
-    background: var(--base-color-second);
-    position: absolute;
-    top: -8.3%;
-    left: -33%;
-    z-index: 0;
-}
-
-#About .image img{
-    position: relative;
-    
-}
-
-#About .image img,
-#About .image::before {
-    border-radius: 0.25rem;
-}
-
-#About .text {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
-
-/* Services */
-
-
-#Services .cards {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    display: grid;
-    gap: 1rem;
-
-}
-
-#Services .cards .card {
-    width: 100%;
-    height: 500px;
-
-    position: relative;
-}
-
-
-
-#Services .cards .card:hover .overlay, 
-#Services .cards .card:hover .text {
-    opacity: 1;
-    display: flex;
-    transform: translateY(0);
-}
-
-
-
-#Services .card img{
-    border-radius: 8px;
-    width: 100%;
-    height:100%;
-    object-fit: cover;
-}
-
-#Services .overlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background: linear-gradient(rgba(0,0,0,0.2), var(--base-color-alt));
-    border-radius:8px;
-    opacity: 0;
-    
-    
-    
-    transition: 1s;
-}
-
-#Services .text{
-    position: absolute;
-    bottom: 0;
-
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    color: #fff;
-    text-align: center;
-
-    margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateY(-50%);
-    transition: 1.5s;
-}
-
-#Services .text h3 {
-    font: 600 1.3rem var(--title-font);
-    text-shadow: 0 1px 2px black;
-}
-
-#Services .text hr {
-    width: 50%;
-    height: 2px;
-    border-radius: 50%;
-}
-
-/*Contact*/
