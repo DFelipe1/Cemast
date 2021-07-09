@@ -41,7 +41,7 @@
 }
 
 /* render Menu*/
-nav.show {
+#header  nav.show {
     width: 100%;
     height: 100vh;
     
