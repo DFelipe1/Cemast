@@ -72,6 +72,10 @@ body {
     padding: 5rem 0;
 }
 
+.section .title {
+    margin-bottom: 1rem;
+}
+
 .grid {
     display: grid;
     gap: 2rem;
@@ -113,16 +117,17 @@ body {
     border-bottom: 0.5px solid #e4e4e4;
     transition: 0.5s;
 
-    padding: 1rem 0; 
+
 }
 
 #header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 4.5rem;
 }
 
 #header.sticky {
     
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
