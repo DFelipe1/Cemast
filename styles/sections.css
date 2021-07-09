@@ -120,35 +120,58 @@
     width:fit-content;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    
+    border: 3px solid var(--base-color-second);
+
+}
+
+#Services .cards .card:hover {
+    border: 3px solid transparent;
+}
+
+#Services .card .front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2.5rem 1.25rem;
     text-align: center;
-    transition: 0.5s;
+    padding: 10px;
 
-    border: 1px solid transparent
+    transform: translateY(0);    
 
+    transition: 1s;
+}
+
+#Services .card:hover .front{
+    transform: translateY(-100%);
 }
 
 
-
-
-#Services .card .image{
+#Services .card .front .image{
     position: relative;
     clip-path: circle();
 
-    width: 9rem;
-    height: 9rem;
+    width: 5rem;
+    height: 5rem;
     
 }
 
 
 
-#Services .card .image img{
+#Services .card .front .image img{
     clip-path: circle();
     border-radius: 8px 8px 0 0;
     width: 100%;
@@ -160,22 +183,10 @@
 
 
 
-/*#Services .overlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background: linear-gradient(rgba(0,0,0,0.2), var(--base-color-alt));
-    border-radius:8px;
-    opacity: 0;
-    
-    
-    
-    transition: 1s;
-}*/
+
 
 #Services .text{
-  width: 300px;
+  width: 200px;
 
   margin-top: 1.5rem;
 }
@@ -189,12 +200,42 @@
     color: var(--color-text);
 }
 
-#Services .cards .card:hover {
-    border: 1px solid var(--base-color);
-    transform: translateY(-2%) !important; 
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+#Services .card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--base-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+
+    transform: translateY(100%);    
+
+    transition: 0.5s;
 }
 
+#Services .card:hover .back{
+    transform: translateY(0);
+}
+
+#Services .card .back .list-card {
+    display: grid;
+    gap: 2rem;
+    list-style: circle;
+    text-align: left;
+}
+
+#Services .card .back .list-card li {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
 
 /*Contact*/
@@ -243,6 +284,10 @@ footer .brand {
     color: var(--text-color-light);
     
     width: fit-content;
+}
+
+footer .brand p{
+    font-size: 1rem;
 }
 
 footer .social-links {
