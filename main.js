@@ -15,11 +15,24 @@ function handleMenu() {
     }
 }
 
+toggle.addEventListener('click', handleMenu);
+
+
+
 const links = document.querySelectorAll('nav ul li a');
 
 for (const link of links) {
     link.addEventListener('click', () =>{
         nav.classList.remove('show')
+        toggle.classList.remove('menu-active')
+
+        if(toggle.classList == "menu-active"){
+            i.classList.remove('fa-bars')
+            i.classList.add('fa-times')
+        }else {
+            i.classList.remove('fa-times')
+            i.classList.add('fa-bars')
+        }
     })
 }
 
