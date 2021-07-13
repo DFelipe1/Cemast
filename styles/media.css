@@ -83,6 +83,34 @@
         margin-right: auto;
     }
 
+        /* navigation */
+        nav .menu ul{
+          opacity: 1;
+          visibility: visible;
+          top: 0;
+          display: flex;
+        }
+      
+        
+      
+        nav .menu ul li a.title {
+          font: 400 1rem var(--body-font);
+          -webkit-font-smoothing: antialiased;
+        }
+      
+        nav .menu ul li a.title.active {
+          font-weight: bold;
+          -webkit-font-smoothing: auto;
+        }
+      
+        nav  #toggle {
+          display: none;
+        }
+    
+        nav.show {
+            display: none;
+        }
+
     
 
     #Services .cards{
