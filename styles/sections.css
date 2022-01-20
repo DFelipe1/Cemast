@@ -98,7 +98,7 @@
 
 /* Services */
 #Services header{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 #Services header p span {
@@ -106,135 +106,57 @@
     color: var(--base-color);
 }
 
-#Services .cards {
-    max-width: 430px;
-    display: grid;
-    gap: 2rem;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-#Services .cards .card {
-    width:fit-content;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-    transition: 0.5s;
-    position: relative;
-    overflow: hidden;
-    width: 200px;
-    height: 300px;
-    
-    border: 3px solid var(--base-color-second);
-
-}
-
-#Services .cards .card:hover {
-    border: 3px solid transparent;
-}
-
-#Services .card .front {
-    position: absolute;
-    top: 0;
-    left: 0;
+#Services .service {
     width: 100%;
-    height: 100%;
+    height: 40vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 2.5rem 1.25rem;
-    text-align: center;
-    padding: 10px;
-
-    transform: translateY(0);    
-
-    transition: 1s;
-}
-
-#Services .card:hover .front{
-    transform: translateY(-100%);
-}
-
-
-#Services .card .front .image{
-    position: relative;
-    clip-path: circle();
-
-    width: 5rem;
-    height: 5rem;
-    
-}
-
-
-
-#Services .card .front .image img{
-    clip-path: circle();
-    border-radius: 8px 8px 0 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
-    
-}
-
-
-
-
-
-#Services .text{
-  width: 200px;
-
-  margin-top: 1.5rem;
-}
-
-#Services .text .subtitle {
     margin-bottom: 1rem;
 }
 
-#Services .text p {
-    font: normal 1rem var(--body-font);
-    color: var(--color-text);
+#Services .service .img {
+    height: 100%;
+    width: 65%;
+    margin:0 1.5rem;
+    
 }
 
-#Services .card .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+#Services .service .img img {
     height: 100%;
-    background: var(--base-color);
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#Services .service.creche .img img {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#Services .service .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2.5rem 1.25rem;
-    text-align: center;
-    padding: 10px;
-    color: #fff;
-
-    transform: translateY(100%);    
-
-    transition: 0.5s;
-}
-
-#Services .card:hover .back{
-    transform: translateY(0);
-}
-
-#Services .card .back .list-card {
-    display: grid;
-    gap: 2rem;
-    list-style: circle;
+    gap: 2.7rem;
     text-align: left;
 }
 
-#Services .card .back .list-card li {
-    font-size: 1.2rem;
-    font-weight: 600;
+
+
+#Services .service.creche .content{
+    text-align: right;
+}
+
+#Services .service .content a {
+    width: 10rem;
+}
+
+#Services .service.creche .content div {
+    width: 100%;
+    position: relative;
+}
+
+#Services .service.creche .content div>a {
+    position: absolute;
+    right:0;
 }
 
 
