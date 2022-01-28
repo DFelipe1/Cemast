@@ -17,7 +17,9 @@
 
 #Home .image {
     position: relative;
-    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #Home .image::before{
@@ -33,7 +35,6 @@
 
 #Home .image img{
     position: relative;
-    right: 2.93rem;
     
 }
 
@@ -65,18 +66,19 @@
 
 #About .image{
     position: relative;
-    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #About .image::before{
     content: '';
     height: 100%;
-    max-height: 300px;
-    width: 100%;
+    width: 80%;
     background: var(--base-color-second);
     position: absolute;
     top: -8.3%;
-    left: -33%;
+    left: -30%;
     z-index: 0;
     
 }
@@ -94,11 +96,17 @@
 #About .text {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+
+    text-align: center;
+}
+
+#About .text p {
+    Text-align: justify;
 }
 
 /* Services */
 #Services header{
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 #Services header p span {
@@ -106,18 +114,23 @@
     color: var(--base-color);
 }
 
-#Services .service {
-    width: 100%;
-    height: 40vh;
+#Services .service-wrapper {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+} 
+
+#Services .service-wrapper .service {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 #Services .service .img {
     height: 100%;
-    width: 65%;
-    margin:0 1.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
     
 }
 
@@ -128,36 +141,21 @@
     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-#Services .service.creche .img img {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
+
 
 #Services .service .content {
     display: flex;
     flex-direction: column;
-    gap: 2.7rem;
-    text-align: left;
+    gap: 1.5rem;
+    text-align: center;
+    padding:2rem ;
+}
+
+#Services .service .content p {
+    text-align: justify;
 }
 
 
-
-#Services .service.creche .content{
-    text-align: right;
-}
-
-#Services .service .content a {
-    width: 10rem;
-}
-
-#Services .service.creche .content div {
-    width: 100%;
-    position: relative;
-}
-
-#Services .service.creche .content div>a {
-    position: absolute;
-    right:0;
-}
 
 
 /*Contact*/
@@ -169,64 +167,120 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
+    text-align: center;
 }
-#Contact  .content-info {
-    max-width: 100%;
-    margin-top: 20px;
-}
-
-#Contact  .content-info .grid{
-    
-    gap: 1.5rem;
-}
-
-#Contact .container i{
-    font-size: 1.5rem;
-    margin-right: 0.625rem;
-}
-
-#Contact  .content-info .grid i{
-    color: var(--base-color);
-    min-width: 24px;
-}
-
-#Contact  .content-info .grid li {
+ #Contact .container-form {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+#Contact .form {
+    width: 100%;
+    max-width: 500px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     
 }
+
+#Contact .form input,
+#Contact .form textarea {
+    width: 100%;
+    
+    padding: 15px 5px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid #222;
+    margin-bottom: 10px;
+    font-family: var(--body-font);
+}
+
+#Contact .form textarea {
+    padding: 5px;
+    height: 100px;
+    resize: none;
+}
+
+#Contact .form div {
+    width: 100%;
+    text-align: right;
+}
+
 
 /* footer */
 footer {
     background: var(--base-color);
 }
 
+
 footer .brand {
     color: var(--text-color-light);
     
     width: fit-content;
+    margin-bottom: 1.5rem;
 }
 
 footer .brand p{
     font-size: 1rem;
 }
 
-footer .social-links {
-    
+footer  .content-info {
+    max-width: 100%;
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+footer  .content-info .grid{
+
+    gap: 1rem;
     
 }
 
+footer .container i{
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+footer  .content-info .grid i{
+    color: #f1f1f1;
+    font-size: 20px;
+}
+
+footer  .content-info .grid li {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+
+footer h4 {
+    height:fit-content;
+    color: #fff;
+    font-weight: 600;
+}
+footer .social-links div {
+    
+    display: flex;
+    gap: 1rem;
+    
+}
+
+footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: 0.5s;
+}
 footer .social-links i {
     font-size: 1.3rem;
     min-width: 24px;
-    transition: 0.5s;
     color: var(--text-color-light);
 }
 
-footer .social-links i:hover {
+footer .social-links a:hover {
     transform: translateY(-10px)
 }
  
