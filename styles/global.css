@@ -93,6 +93,8 @@ body {
     border-radius: 0.25rem;
     font: 500 1rem var(--body-font);
     transition: background 0.3s;
+    border: none;
+    outline: none;
   }
 
   .button:hover {
