@@ -28,13 +28,14 @@
     width: 100%;
     background: var(--base-color-second);
     position: absolute;
-    top: -16.8%;
-    left: 16.7%;
+    top: -15.8%;
+    left: 15.7%;
     z-index: 0;
 }
 
 #Home .image img{
     position: relative;
+    box-shadow: 3px -3px 8px rgba(0,0,0,0.2);
     
 }
 
@@ -85,7 +86,7 @@
 
 #About .image img{
     position: relative;
-    
+    box-shadow: -6px -3px 8px rgba(0,0,0,0.2)
 }
 
 #About .image img,
@@ -168,6 +169,10 @@
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+}
+
+#Contact .container .button i {
+    margin-right: 5px;
 }
  #Contact .container-form {
      width: 100%;
