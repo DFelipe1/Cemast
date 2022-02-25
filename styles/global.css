@@ -24,7 +24,7 @@ img {
 :root {
     
      /* colors */
-  --hue: 36;
+  --hue: 210;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 100% 57%);
   --base-color-second: hsl(var(--hue) 94% 79%);
@@ -32,7 +32,7 @@ img {
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
-  --body-color: hsl(0 0% 98%);
+  --body-color: hsl(var(--hue) 80% 98%);
 
   /* fonts */
   --title-font-size: 1.875rem;
