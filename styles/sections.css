@@ -222,12 +222,17 @@ footer {
 footer .brand {
     color: var(--text-color-light);
     
-    width: fit-content;
-    margin-bottom: 1.5rem;
+    /* width: fit-content; */
+    margin-top: 1.5rem;
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 footer .brand p{
     font-size: 1rem;
+    text-align: center;
 }
 
 footer  .content-info {
@@ -268,14 +273,15 @@ footer h4 {
 footer .social-links div {
     
     display: flex;
+    flex-direction: column;
     gap: 1rem;
     
 }
 
 footer .social-links a {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     color: #fff;
     transition: 0.5s;
 }
