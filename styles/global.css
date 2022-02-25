@@ -102,9 +102,9 @@ body {
   }
 
 /* logo */
-.logo a{
-    font: 700 var(--title-font-size) 'Poppins',sans-serif;
-    color: var(--base-color);
+.logo{
+    width: 70px;
+    height: 70px;
 }
 
 .divider {
@@ -134,7 +134,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4.5rem;
+    padding: 1rem 0;
 }
 
 #header.sticky {
